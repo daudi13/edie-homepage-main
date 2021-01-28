@@ -12,3 +12,63 @@
     box-sizing: border-box;
 }
 
+// typography 
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    // overflow: hidden;
+
+    .container {
+        width: 1440px;
+        padding: 42px 52px;
+        margin: 0 auto;
+
+        main {
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 104px;
+
+                .header__logo {
+                    font-size: 36px;
+                    font-family: 'Heebo', sans-serif;
+                    font-weight: 800;
+                    line-height: 52.88px;
+                }
+
+                .header__nav {
+
+                    .nav__list {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    & .nav__item:not(:last-child) {
+                        margin-right: 62px;
+                    }
+
+                    .nav__link {
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 24px;
+                        line-height: 36px;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
