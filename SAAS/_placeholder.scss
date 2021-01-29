@@ -1,0 +1,47 @@
+%navigation {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+%email-block {
+    @include intro-link;
+    position: relative;
+    width: 350px;
+    padding: 15px 4px 15px 21px;
+    border-radius: 12px;
+    border: 0;
+    outline: none;
+    color: $clr-7;
+    background: $clr-8;
+    font-family: 'Poppins', sans-serif;
+}
+
+%button {
+    position: absolute;
+    width: 94px;
+    padding: 11px 17px;
+    transform: translate(-104%, 9%);
+    border-radius: 12px;
+    border: 0;
+    color: #fff;
+    background: $clr-1;
+    outline: none;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'Poppins', sans-serif;
+}
+
+%wrapper-box {
+    width: 1440px;
+    padding: 42px 52px;
+    margin: 0 auto;
+}
+
+%logo {
+    font-size: 36px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 800;
+    line-height: 52.88px;
+}
+

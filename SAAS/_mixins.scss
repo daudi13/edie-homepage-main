@@ -1,0 +1,68 @@
+@mixin logo {
+    font-size: 36px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 800;
+    line-height: 52.88px;
+}
+
+@mixin Dis-flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center {
+    @include Dis-flex;
+    justify-content: center;
+}
+
+@mixin pre-bold {
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin Primary-font {
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin Secondary-font {
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin bold {
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin intro-link {
+    line-height: 27px;
+    font-size: 18px;
+}
+
+@mixin email-block {
+    
+}
+
+@mixin letter {
+    @include Primary-font;
+    line-height: 36px;
+    font-size: 24px;
+}
+
+@mixin capital {
+    @include Primary-font;
+    font-size: 36px;
+    line-height: 56px;
+}
+
+@mixin pro {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+@mixin text {
+    font-size: 14px;
+    line-height: 21px;
+}
