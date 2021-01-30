@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@300;400;500;700&display=swap");
-body .container main .header .header__nav .nav__link {
+body .container main .header__nav .nav__link {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   line-height: 36px;
@@ -48,6 +48,73 @@ body footer .footer-wrap .socials .header__logo {
   line-height: 52.88px;
 }
 
+body .container main .header__nav .nav__link::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #2d9cdb;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1em;
+  }
+  .header .header__nav {
+    position: fixed;
+    background: #000;
+    color: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 0.65s cubic-bezier(0, 1.88, 1, 1.22);
+    transition: all 0.65s cubic-bezier(0, 1.88, 1, 1.22);
+  }
+  .header .nav__list {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .header .active .nav {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .header .active .nav-toggle {
+    position: fixed;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -79,6 +146,7 @@ body .container main .header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 body .container main .header .header__logo {
@@ -88,7 +156,26 @@ body .container main .header .header__logo {
   line-height: 52.88px;
 }
 
-body .container main .header .header__nav .nav__list {
+body .container main .header .nav-toggle {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  body .container main .header .nav-toggle {
+    display: inline-block;
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+    outline: none;
+  }
+}
+
+body .container main .header__nav .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,12 +187,45 @@ body .container main .header .header__nav .nav__list {
           justify-content: center;
 }
 
-body .container main .header .header__nav .nav__item:not(:last-child) {
+@media screen and (max-width: 800px) {
+  body .container main .header__nav .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+body .container main .header__nav .nav__item:not(:last-child) {
   margin-right: 62px;
 }
 
-body .container main .header .header__nav .nav__link {
+@media screen and (max-width: 750px) {
+  body .container main .header__nav .nav__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+body .container main .header__nav .nav__link {
   color: inherit;
+  position: relative;
+}
+
+body .container main .header__nav .nav__link::after {
+  content: "";
+}
+
+body .container main .header__nav .nav__link:hover::after {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 body .container main .main--intro {
