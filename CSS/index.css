@@ -703,6 +703,12 @@ footer {
     color: white;
 }
 
+@media only screen and (min-width: 1300px) {
+    .footer__link:hover {
+        color: var(--blu);
+    }
+}
+
 .title {
     font-family: 'Heebo', sans-serif;
     font-weight: 800;
